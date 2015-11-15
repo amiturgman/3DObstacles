@@ -1,0 +1,14 @@
+{
+  "name": "3DObstacles",
+  "version": "1.0.0",
+  "description": "3D Obstacles Sense and Avoid for drones",
+  "main": "index.js",
+  "author": "Ami Turgman",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "request": "^2.65.0",
+    "sqlite3": "^3.1.1"
+  }
+}
