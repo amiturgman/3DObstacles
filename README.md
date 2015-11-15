@@ -9,10 +9,10 @@ This is a sample of how to use Node.js and Spatialite for modeling and querying 
 The following is an example of how to call the `/obstacles` REST API:
 ![Query Sample](https://github.com/amiturgman/3dobstacles/raw/master/img/query_sample.png "3D Obstacles Modeling for drones")
 
-#Useage
+#Usage
 
     git clone https://github.com/amiturgman/3dobstacles.git
-    cd spatial
+    cd 3DObstacles\src
     npm install
     node index.js
 
@@ -21,13 +21,12 @@ The following is an example of how to call the `/obstacles` REST API:
 If you're running on Windows, you might have issues compiling the node-spatialite module.
 In such case, please follow this procedure:
 
+    cd node_modules
     git clone https://github.com/amiturgman/node-spatialite.git
     cd node-spatialite
     git submodule init
     git submodule update
     node-gyp rebuild --msvs_version=2013
-
-Then, copy the `node-spatialite` folder to the `node_modules` folder of your Node.js project.
 
 # License
 [MIT](LICENSE)
