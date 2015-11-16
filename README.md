@@ -1,4 +1,4 @@
-# 3D Obstacles Modeling for drones' Sense&Avoid using Node.js and Spatialite
+# 3D Obstacles Modeling for drones - Sense&Avoid using Node.js and Spatialite
 
 This repository contains the source files for the example I'm talking about in this [blog post](http://www.amiturgman.com/blog-1/2015/11/15/3d-obstacles-modeling-for-drones-senseavoid-using-nodejs-and-spatialite).
 
