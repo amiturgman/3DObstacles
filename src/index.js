@@ -70,11 +70,10 @@ function openDb(cb) {
 
         db = new sqlite.Database(tmpDbPath, function(err) {
             if (err) {
-                console.error('error opening db file:', dbPath, err);
+                console.error('error opening db file:', tmpDbPath, err);
                 return cb(err);
             }
             console.log('db opened successfully');
-            //for(var api in db) console.log(api);
 
             console.log('initializing spatialite');
             db.spatialite(function(err) {
@@ -149,9 +148,9 @@ function getQuery(params) {
                 MbrMaxY(vt.areaEnvelope) AS maxY  \
          FROM \
             (SELECT internal.geo AS geo, \
-                    Envelope(Buffer(Envelope(internal.geo), "+ buffer +")) AS areaEnvelope, \
+                    Envelope(Buffer(Envelope(internal.geo), " + buffer + ")) AS areaEnvelope, \
                     SimplifyPreserveTopology(Buffer(internal.geo, " + safeDistance + "), 10) as simplifiedTunnelGeo \
-             FROM (SELECT "+geometryLine+" AS geo) internal \
+             FROM (SELECT " + geometryLine + " AS geo) internal \
             ) vt \
         ) calc \
     JOIN \
